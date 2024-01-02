@@ -1,0 +1,191 @@
+@use "../abstracts/functions.scss" as f;
+@use "../abstracts/colors.scss";
+
+
+// Utils
+.hidden {
+    display: none !important;
+}
+
+/*FORM*/
+/********/
+
+.form-container {
+    max-width: f.rem(375px);
+    background-color: var(--color-white);
+}
+
+.form-image {
+    border-bottom-left-radius: f.rem(15px);
+}
+
+.form__text-container {
+    padding: f.rem(30px) f.rem(20px);
+}
+
+.primary-title {
+    font-size: f.rem(40px);
+    font-weight: 700;
+}
+
+.form__text {
+    margin-top: f.rem(15px);
+}
+
+.newsletter-list {
+    margin-top: f.rem(20px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: f.rem(10px);
+}
+
+.newsletter-item {
+    display: flex;
+    gap: f.rem(10px);
+}
+
+.form-control {
+    margin-top: f.rem(40px);
+    margin-bottom: f.rem(10px);
+    display: flex;
+    flex-direction: column;
+    gap: f.rem(10px);
+
+    position: relative;
+}
+
+.form-control label {
+    font-size: f.rem(14px);
+    font-weight: 700;
+}
+
+.form-control input {
+    padding: f.rem(15px) f.rem(20px);
+    border: 1px solid var(--color-grey);
+    border-radius: f.rem(10px);
+}
+
+/*Form control styles*/
+.form-control.error input {
+	border-color: var(--color-tomato);
+    color: var(--color-tomato);
+    background-color: hsla(4, 100%, 67%, 15%);
+}
+
+.form-control svg {
+    position: absolute;
+    visibility: hidden;
+
+    top: f.rem(45px);
+	right: f.rem(30px);
+}
+
+.form-control.error svg.fa-exclamation-circle {
+	fill: var(--color-tomato);
+	visibility: visible;
+}
+
+.form-control small {
+    position: absolute;
+    right: 0;
+    font-size: f.rem(14px);
+    font-weight: 700;
+	color: var(--color-tomato);
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+    
+}
+
+/*Button*/
+
+.form-btn {
+    width: 100%;
+    margin: f.rem(10px) 0;
+    padding: f.rem(15px) f.rem(20px);
+    font-weight: 700;
+    border: none;
+    border-radius: f.rem(10px);
+    background-color: var(--color-darkslate-grey);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+/*SUCCESS*/
+/********/
+.success-container {
+    padding: f.rem(150px) f.rem(20px) f.rem(20px);
+}
+
+.success--title {
+    margin-top: f.rem(40px);
+    line-height: f.rem(40px);
+}
+
+.success-text {
+    margin-top: f.rem(30px);
+}
+
+strong {
+    font-weight: 700;
+}
+
+.success--btn {
+    margin-top: f.rem(300px);
+}
+
+@media (width > 37.5em) {
+    .form-container {
+        max-width: f.rem(928px);
+        border-radius: f.rem(20px);
+        padding: f.rem(20px);
+    }
+
+    .form-newsletter {
+        display: flex;
+        gap: f.rem(40px);
+    }
+
+    picture {
+        order: 2;
+    }
+
+    .form-image {
+        object-fit: fill;
+    }
+
+    .primary-title {
+        font-size: f.rem(60px);
+    }
+
+    .form-btn:hover {
+        background-image: linear-gradient(to top, hsl(4, 100%, 67%), hsl(4, 100%, 72%) );
+        box-shadow: -11px 14px 47px -2px rgba(255,119,110,0.60);
+    }
+
+    /*SUCCESS*/
+    /********/
+    .success-container {
+        max-width: f.rem(450px);
+        max-height: f.rem(450px);
+        padding: f.rem(20px) f.rem(40px);
+    }
+
+    .success--title {
+        font-size: f.rem(50px);
+        line-height: f.rem(50px);
+    }
+
+    .success-text {
+        font-size: f.rem(16px);
+    }
+    
+    .success--btn {
+        margin-top: f.rem(30px);
+    }
+    
+}

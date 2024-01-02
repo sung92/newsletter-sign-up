@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <script type="module" src="js/script.js"></script>
+  <link rel="stylesheet" href="main.scss">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 2rem; color: #f38e82}
+    .attribution a { color: #fb7413; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <main>
+
+    <div class="form-container">
+
+      <!-- Sign-up form start -->
+      <form class="form-newsletter" id="form">
+        <picture>
+          <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 37.5em)"></source>
+          <img class="form-image" src="./assets/images/illustration-sign-up-mobile.svg" alt="Application overview">
+        </picture>
+
+        <div class="form__text-container">
+          <h2 class="primary-title">Stay updated!</h2>
+          <p class="form__text">Join 60,000+ product managers receiving monthly updates on:</p>
+  
+          <ul class="newsletter-list" role="list">
+            <li class="newsletter-item">
+              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+              <span>Product discovery and building what matters</span>
+            </li>
+            <li class="newsletter-item">
+              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+              <span>Measuring to ensure updates are a success</span>
+            </li>
+            <li class="newsletter-item">
+              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+              <span>And much more!</span>
+            </li>
+          </ul>
+  
+          <div class="form-control">
+            <label for="email">Email address</label>
+            <input id="email" placeholder="email@company.com" aria-describedby="email-validation">
+            <svg aria-hidden="true" focusable="false" class="fa-exclamation-circle" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ff0000}</style><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+            <small id="email-validation" aria-live="assertive"></small>
+          </div>
+  
+          <button class="form-btn">Subscribe to monthly newsletter</button>
+        </div>
+
+      </form>
+      <!-- Sign-up form end -->
+
+
+      <!-- Success message start -->
+      <div class="success-container hidden">
+        <div class="visually-hidden">Subscribed successfully</div>
+        <img class="success-icon" src="./assets/images/icon-success.svg" alt="">
+        <h2 class="primary-title success--title">Thanks for subscribing!</h2>
+        <p class="success-text"> A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
+          Please open it and click the button inside to confirm your subscription.</p>
+        <button class="form-btn success--btn">Dismiss message</button>
+      </div>
+    </div>
+    <!-- Success message end -->
+
+    
+  </main>
+
+  
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>
